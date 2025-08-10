@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from "next";
 import React from "react";
-import { Check, Shield, Cpu, HardDrive, Hash, CalendarDays, FileText, Info, Zap, Mic } from "lucide-react";
+import { Check, Shield, Hash, CalendarDays, FileText, Info, Zap, Mic } from "lucide-react";
 import DownloadCTA from "@/components/DownloadCTA";
 import PlatformCard from "@/components/PlatformCard";
 
@@ -17,6 +17,10 @@ const features = [
 ];
 
 export default function DownloadPage(): React.ReactElement {
+  const windowsUrl =
+    process.env.NEXT_PUBLIC_WINDOWS_URL ||
+    ("https://github.com/mustafadmrsy/nexustalk/releases/latest/download/" +
+      encodeURIComponent("Nexus.Setup.1.0.3.exe"));
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
       <div className="grid gap-10 lg:grid-cols-5 items-start">
@@ -117,13 +121,10 @@ export default function DownloadPage(): React.ReactElement {
         {/* Right: single, full Windows card */}
         <div className="lg:col-span-2 self-stretch flex">
           <div className="flex-1">
-          const windowsUrl = process.env.NEXT_PUBLIC_WINDOWS_URL ||
-            "https://github.com/mustafadmrsy/nexustalk/releases/latest/download/" + encodeURIComponent("Nexus Setup 1.0.3.exe");
-
           <PlatformCard
               title="Windows"
-              subtitle="Önerilen: Nexus Setup 1.0.3.exe"
-            cta={<DownloadCTA href={windowsUrl} label="Nexus Setup 1.0.3.exe" subLabel="Windows için" download />}
+              subtitle="Önerilen: Nexus.Setup.1.0.3.exe"
+            cta={<DownloadCTA href={windowsUrl} label="Nexus.Setup.1.0.3.exe" subLabel="Windows için" download />}
             footnote=""
             >
               <div className="mt-4 grid grid-cols-2 gap-3 text-xs md:grid-cols-3">
