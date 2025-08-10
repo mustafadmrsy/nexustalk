@@ -39,7 +39,14 @@ export const metadata: Metadata = {
       "Hızlı, güvenli ve modern masaüstü iletişim uygulaması. Gerçek zamanlı sesli sohbet, ekran paylaşımı ve topluluk yönetimi.",
     images: ["/og"],
   },
-  icons: { icon: "/favicon.ico" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/images/logo.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/images/logo.png" }],
+    shortcut: ["/favicon.ico"],
+  },
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
