@@ -1,10 +1,10 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
 
 export async function GET() {
+  const width = 1200;
+  const height = 630;
   const gradient = {
     background: "linear-gradient(135deg, #a78bfa33, #22d3ee33, #34d39933)",
   } as const;
@@ -13,8 +13,8 @@ export async function GET() {
     (
       <div
         style={{
-          width: size.width,
-          height: size.height,
+          width,
+          height,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -31,7 +31,7 @@ export async function GET() {
         </div>
       </div>
     ),
-    { ...size }
+    { width, height }
   );
 }
 
