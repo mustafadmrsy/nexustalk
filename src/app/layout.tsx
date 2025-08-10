@@ -41,11 +41,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
       { url: "/images/logo.png", type: "image/png", sizes: "32x32" },
+      { url: "/images/logo.png", type: "image/png", sizes: "192x192" }
     ],
     apple: [{ url: "/images/logo.png" }],
-    shortcut: ["/favicon.ico"],
+    shortcut: ["/images/logo.png"],
   },
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
