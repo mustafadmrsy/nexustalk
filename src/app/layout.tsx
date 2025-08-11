@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     images: ["/og"],
   },
   icons: {
-    icon: "/images/logo.png?v=2",
-    shortcut: ["/images/logo.png?v=2"],
-    apple: ["/images/logo.png?v=2"],
+    icon: "/images/logo.png",
+    shortcut: ["/images/logo.png"],
+    apple: ["/images/logo.png"],
   },
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },

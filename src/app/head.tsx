@@ -1,5 +1,5 @@
 export default function Head(): React.ReactElement {
-  const iconHref = "/images/logo.png?v=4";
+  const iconHref = "/images/logo.png";
   return (
     <>
       <link rel="icon" href={iconHref} />

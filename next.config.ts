@@ -7,22 +7,14 @@ const nextConfig: NextConfig = {
       {
         source: "/favicon.ico",
         headers: [
-          { key: "Cache-Control", value: "no-store" },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
       {
-        source: "/images/logo.png",
+        source: "/images/:path*",
         headers: [
-          { key: "Cache-Control", value: "no-store" },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
-      },
-    ];
-  },
-  rewrites: async () => {
-    return [
-      {
-        source: "/favicon.ico",
-        destination: "/images/logo.png",
       },
     ];
   },

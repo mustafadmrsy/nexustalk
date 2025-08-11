@@ -65,7 +65,7 @@ export default function Navbar(): React.ReactElement {
               Download
             </Link>
             <a
-              href="https://github.com/mustafadmrsy/Nexus"
+              href="https://github.com/mustafadmrsy/nexustalk"
               target="_blank"
               rel="noreferrer noopener"
               className="inline-flex items-center justify-center rounded-md border border-white/15 px-3 py-2 text-sm font-medium hover:bg-white/5 transition"
